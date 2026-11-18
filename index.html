@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>momenTA – Event Organizer Yogyakarta</title>
+<meta name="description" content="momenTA: Event Organizer premium di Yogyakarta, Solo Raya & sekitarnya. Pernikahan, corporate gathering, dan private party.">
+<meta property="og:title" content="momenTA – Crafting Timeless Moments in Yogyakarta">
+<meta property="og:description" content="Event Organizer premium di Yogyakarta & sekitarnya. Simulasi budget & konsultasi via WhatsApp.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#101D2C">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"EventPlanner","name":"momenTA","telephone":"+6285641156827","areaServed":["Yogyakarta","Solo","Klaten","Sleman","Bantul"],"geo":{"@type":"GeoCoordinates","latitude":-7.7956,"longitude":110.3695},"address":{"@type":"PostalAddress","addressLocality":"Yogyakarta","addressCountry":"ID"},"openingHoursSpecification":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"08:00","closes":"17:00"}}</script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{box-sizing:border-box;--navy:#101D2C;--gold:#C7A56A;--card:#1E293B;--txt:#F8FAFC;--mut:#94A3B8;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--navy);color:var(--txt);font-family:'Plus Jakarta Sans',Inter,system-ui,sans-serif;line-height:1.6}
+h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.2;margin:0 0 .5em}
+h1{font-size:clamp(2.2rem,6vw,4rem)}h2{font-size:clamp(1.7rem,4vw,2.5rem)}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+section.v{display:none;padding:48px 0 80px;animation:f .5s}
+section.v.on{display:block}
+@keyframes f{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(16,29,44,.8);backdrop-filter:blur(14px);border-bottom:1px solid rgba(199,165,106,.2)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700}.logo b{color:var(--gold)}
+nav{display:flex;gap:18px;font-size:.88rem;color:var(--mut)}
+nav a:hover,nav a.on{color:var(--gold)}
+#burger{display:none;background:none;border:0;color:var(--txt);cursor:pointer}
+@media(max-width:860px){nav{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;background:var(--navy);padding:16px 20px;border-bottom:1px solid var(--card)}nav.open{display:flex}#burger{display:block}}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:999px;border:1px solid var(--gold);background:var(--gold);color:var(--navy);font:600 .95rem inherit;font-family:inherit;cursor:pointer;transition:.25s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(199,165,106,.3)}
+.btn.o{background:transparent;color:var(--gold)}
+.card{background:rgba(30,41,59,.7);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.07);border-radius:18px;padding:24px;transition:.3s}
+.card:hover{transform:translateY(-5px);border-color:rgba(199,165,106,.5)}
+.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.mut{color:var(--mut)}.gold{color:var(--gold)}
+.hero{padding:70px 0 40px;text-align:center}
+.badge{display:inline-flex;gap:6px;align-items:center;border:1px solid rgba(199,165,106,.4);padding:6px 14px;border-radius:999px;font-size:.8rem;color:var(--gold);margin-bottom:20px}
+.logos{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:28px}
+.logos span{font-size:.75rem;padding:6px 12px;border:1px dashed var(--mut);border-radius:8px;color:var(--mut)}
+label{display:block;font-size:.85rem;margin:14px 0 6px;color:var(--mut)}
+input,select,textarea{width:100%;padding:12px;border-radius:10px;border:1px solid #334155;background:var(--navy);color:var(--txt);font:inherit}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--gold)}
+.stars{display:flex;gap:4px}.stars button{background:none;border:0;cursor:pointer;color:#475569;padding:2px}.stars button.on,.st{color:var(--gold)}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}
+.chip{padding:8px 16px;border-radius:999px;border:1px solid #334155;background:none;color:var(--mut);cursor:pointer;font:inherit}.chip.on{background:var(--gold);color:var(--navy);border-color:var(--gold)}
+.ph{height:170px;border-radius:12px;margin-bottom:14px;display:flex;align-items:flex-end;padding:12px;font-size:.75rem;background:linear-gradient(135deg,var(--c1),var(--c2))}
+.tag{background:rgba(16,29,44,.7);padding:3px 10px;border-radius:999px}
+.tier{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.tier .btn{padding:7px 14px;font-size:.78rem}
+#wa{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:30;background:#25D366;color:#fff;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.4)}
+#wa i{position:absolute;top:2px;right:2px;width:13px;height:13px;border-radius:50%;background:#ef4444;animation:p 1.6s infinite}
+@keyframes p{0%{box-shadow:0 0 0 0 rgba(239,68,68,.7)}100%{box-shadow:0 0 0 12px transparent}}
+#wag{position:fixed;right:84px;bottom:calc(30px + env(safe-area-inset-bottom,0px));z-index:30;background:var(--card);padding:8px 14px;border-radius:12px;font-size:.8rem;max-width:200px}
+#modal{display:none;position:fixed;inset:0;z-index:50;background:rgba(0,0,0,.65);place-items:center;padding:20px}
+#modal.on{display:grid}
+#modal .card{max-width:440px;width:100%;position:relative;background:var(--card)}
+.x{position:absolute;top:12px;right:14px;background:none;border:0;color:var(--mut);cursor:pointer}
+.tot{font-family:'Playfair Display',serif;font-size:1.9rem;color:var(--gold)}
+.chk{display:flex;gap:10px;align-items:center;padding:8px 0;cursor:pointer}.chk input{width:auto}
+footer{border-top:1px solid var(--card);padding:30px 0;text-align:center;color:var(--mut);font-size:.85rem}
+.two{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.i{width:18px;height:18px;vertical-align:-3px}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<a href="#home" class="logo">momen<b>TA</b></a>
+<nav id="nav">
+<a href="#home">Home</a><a href="#services">Layanan</a><a href="#simulator">Simulator</a><a href="#portfolio">Portofolio</a><a href="#about">Tentang</a><a href="#contact">Kontak</a><a href="#b2b">Corporate</a><a href="#reviews">Ulasan</a>
+</nav>
+<button id="burger" aria-label="Menu"><i data-lucide="menu"></i></button>
+</div></header>
+
+<main class="wrap">
+<!-- HOME -->
+<section class="v" id="home">
+<div class="hero">
+<div class="badge"><i data-lucide="award" class="i"></i> Trusted by 100+ Corporate &amp; Wedding Clients</div>
+<h1>Crafting <span class="gold">Timeless Moments</span><br>in Yogyakarta &amp; Surrounding Areas</h1>
+<p class="mut" style="max-width:620px;margin:0 auto 28px">Rencanakan acara tanpa stres. Dari pernikahan hingga gathering korporat, tim momenTA mengurus semuanya, dari konsep sampai hari-H.</p>
+<a href="#simulator" class="btn" data-track="hero_simulator"><i data-lucide="calculator" class="i"></i> Hitung Budget Acara</a>
+<a href="#" class="btn o" id="heroWa" data-track="hero_wa"><i data-lucide="phone" class="i"></i> Konsultasi Gratis</a>
+<div class="logos"><span>Venue Partner: Royal Ambarrukmo</span><span>Hyatt Regency Yogyakarta</span><span>Tentrem</span><span>Plataran Heritage</span><span>Pendopo Ageng</span></div>
+</div>
+<h2 style="margin-top:50px">Highlight Portofolio</h2>
+<div class="grid" id="homePort"></div>
+<h2 style="margin-top:60px">Kata Klien Kami</h2>
+<div class="card" id="carousel" style="text-align:center;min-height:170px"></div>
+</section>
+
+<!-- SERVICES -->
+<section class="v" id="services">
+<h2>Layanan &amp; Paket</h2><p class="mut">Pilih tier yang sesuai, lalu lanjutkan ke WhatsApp dengan paket terpilih.</p>
+<div class="grid" id="svc"></div>
+</section>
+
+<!-- SIMULATOR -->
+<section class="v" id="simulator">
+<h2>Simulator Budget Acara</h2><p class="mut">Estimasi biaya real-time dalam Rupiah. Hasil bersifat perkiraan awal.</p>
+<div class="two">
+<div class="card">
+<label>Jenis Acara</label><select id="cType"><option value="wedding">Pernikahan</option><option value="corporate">Corporate</option><option value="social">Social Gathering</option></select>
+<label>Paket</label><select id="cTier"><option value="1">Standard</option><option value="1.5">Premium</option><option value="2.4">Bespoke VIP</option></select>
+<label>Jumlah Tamu: <b id="gv" class="gold">200</b></label><input type="range" id="cGuest" min="50" max="1000" step="10" value="200">
+<label>Add-on</label><div id="addons"></div>
+</div>
+<div class="card">
+<p class="mut" style="margin:0">Estimasi total</p>
+<div class="tot" id="tot"></div>
+<div id="brk" class="mut" style="font-size:.88rem;margin:12px 0"></div>
+<button class="btn" id="pdfBtn" data-track="export_pdf"><i data-lucide="download" class="i"></i> Simpan Quotation (PDF)</button>
+<button class="btn o" id="waBtn" data-track="sim_wa" style="margin-top:10px"><i data-lucide="send" class="i"></i> Kirim ke WhatsApp</button>
+</div></div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="v" id="portfolio">
+<h2>Portofolio</h2>
+<div class="chips" id="chips"></div>
+<div class="grid" id="port"></div>
+</section>
+
+<!-- ABOUT -->
+<section class="v" id="about">
+<h2>Tentang momenTA</h2>
+<p class="mut" style="max-width:700px">momenTA lahir di Yogyakarta dari keyakinan bahwa setiap momen layak dirayakan dengan detail yang matang. Kami memadukan keramahan budaya Jawa dengan standar produksi modern untuk melayani DIY, Solo Raya, dan sekitarnya.</p>
+<div class="grid" style="margin:24px 0"><div class="card"><i data-lucide="target" class="gold"></i><h3>Misi</h3><p class="mut">Menghadirkan acara tanpa stres dengan transparansi biaya dan eksekusi presisi.</p></div><div class="card"><i data-lucide="shield-check" class="gold"></i><h3>Kredensial</h3><p class="mut">Jaringan venue &amp; vendor lokal terverifikasi di Yogyakarta.</p></div></div>
+<h3>Tim</h3>
+<div class="grid"><div class="card"><b>Founder &amp; Lead Planner</b><p class="mut">Konsep &amp; client relation</p></div><div class="card"><b>Creative Director</b><p class="mut">Dekorasi &amp; visual</p></div><div class="card"><b>Operations Manager</b><p class="mut">Rundown &amp; vendor</p></div></div>
+</section>
+
+<!-- CONTACT -->
+<section class="v" id="contact">
+<h2>Kontak &amp; Booking</h2>
+<div class="two">
+<form class="card" id="cf">
+<label>Nama</label><input name="n" required><label>Jenis Acara</label><select name="e"><option>Pernikahan</option><option>Corporate</option><option>Social</option><option>Private Party</option><option>Anniversary</option></select>
+<label>Tanggal Rencana</label><input type="date" name="d"><label>Pesan</label><textarea name="m" rows="3"></textarea>
+<button class="btn" style="margin-top:16px" data-track="contact_submit"><i data-lucide="send" class="i"></i> Kirim via WhatsApp</button>
+</form>
+<div class="card">
+<p><i data-lucide="phone" class="i gold"></i> 085641156827</p>
+<p><i data-lucide="clock" class="i gold"></i> Senin–Sabtu, 08:00–17:00 WIB</p>
+<p><i data-lucide="map-pin" class="i gold"></i> Yogyakarta &amp; sekitarnya</p>
+<iframe title="Peta Yogyakarta" src="https://www.google.com/maps?q=Yogyakarta&output=embed" style="width:100%;height:220px;border:0;border-radius:12px" loading="lazy"></iframe>
+<a class="mut" href="https://www.google.com/maps/search/Yogyakarta" target="_blank" rel="noopener">Buka di Google Maps</a>
+</div></div>
+</section>
+
+<!-- B2B -->
+<section class="v" id="b2b">
+<h2>Corporate &amp; B2B Portal</h2><p class="mut">Annual gathering, acara institusi, dan brand activation.</p>
+<div class="two">
+<form class="card" id="rf">
+<label>Perusahaan</label><input name="c" required><label>PIC</label><input name="p" required>
+<label>Jenis Kebutuhan</label><select name="t"><option>Annual Gathering</option><option>Institutional Event</option><option>Brand Activation</option></select>
+<label>Perkiraan Peserta</label><input type="number" name="g" min="10" value="100">
+<label>Termin Invoice</label><select name="i"><option>Pembayaran di muka</option><option>DP 50% + pelunasan</option><option>Net 14 hari</option><option>Net 30 hari</option></select>
+<button class="btn" style="margin-top:16px" data-track="rfq_submit"><i data-lucide="file-text" class="i"></i> Ajukan RFQ</button>
+</form>
+<div class="card"><h3>Ketentuan Kemitraan</h3>
+<p class="mut">• Proposal formal diberikan maksimal 3 hari kerja.<br>• DP minimal 30% untuk konfirmasi tanggal.<br>• Faktur &amp; NPWP tersedia.<br>• Perubahan scope maksimal H-7.</p>
+<button class="btn o" id="profBtn" data-track="profile_dl"><i data-lucide="download" class="i"></i> Unduh Company Profile</button></div></div>
+</section>
+
+<!-- REVIEWS -->
+<section class="v" id="reviews">
+<h2>Ulasan Klien</h2>
+<div class="two">
+<form class="card" id="rv">
+<label>Nama</label><input name="n" required>
+<label>Jenis Acara</label><select name="e"><option>Wedding</option><option>Corporate</option><option>Social</option></select>
+<label>Rating</label><div class="stars" id="stars"></div>
+<label>Ulasan</label><textarea name="m" rows="4" required></textarea>
+<button class="btn" style="margin-top:16px" data-track="review_submit">Kirim Ulasan</button>
+<p class="mut" style="font-size:.78rem">Ulasan ditampilkan sebagai “menunggu moderasi” dan dapat dikonfirmasi via WhatsApp.</p>
+</form>
+<div id="rlist"></div></div>
+</section>
+</main>
+
+<footer>© 2026 momenTA · Yogyakarta · 085641156827 · Senin–Sabtu 08:00–17:00 WIB</footer>
+<div id="wag">Halo! Ada acara yang ingin direncanakan? 👋</div>
+<a id="wa" href="#" aria-label="WhatsApp" data-track="float_wa"><i></i><i data-lucide="message-circle"></i></a>
+
+<div id="modal"><div class="card"><button class="x" id="mx" aria-label="Tutup"><i data-lucide="x"></i></button>
+<h3>Gratis: Konsultasi 30 Menit</h3><p class="mut">Atau unduh Checklist Perencanaan Acara (PDF) gratis.</p>
+<button class="btn" id="mWa" data-track="lead_consult">Booking Konsultasi</button>
+<button class="btn o" id="mPdf" data-track="lead_checklist" style="margin-top:10px">Unduh Checklist</button></div></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+<script>
+const NO='6285641156827',$=s=>document.querySelector(s),idr=n=>'Rp '+Math.round(n).toLocaleString('id-ID');
+const wa=t=>'https://wa.me/'+NO+'?text='+encodeURIComponent(t);
+const track=(n,d)=>{try{(window.dataLayer=window.dataLayer||[]).push({event:n,...d});window.va&&window.va('event',{name:n})}catch(e){}};
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const icons=()=>window.lucide&&lucide.createIcons();
+const starsH=n=>'★'.repeat(n)+'☆'.repeat(5-n);
+
+/* DATA */
+const SV=[['Pernikahan','heart','Akad, resepsi, hingga intimate wedding.'],['Corporate Gathering','briefcase','Seminar, gala dinner, family day.'],['Social Event','users','Reuni, arisan, launching.'],['Private Party','party-popper','Ulang tahun & pesta privat.'],['Anniversary','calendar-heart','Perayaan momen berharga.']];
+const PF=[['Wedding Joglo Sleman','Wedding','#7c5c2e','#1E293B'],['Gala Dinner Bank Daerah','Corporate','#1e3a5f','#101D2C'],['Reuni Akbar Alumni','Social','#4a3a5e','#1E293B'],['Garden Party Kaliurang','Private','#2e5e4a','#101D2C'],['Wedding Heritage Solo','Wedding','#5e2e3a','#1E293B'],['Product Launch Yogyakarta','Corporate','#2e4a5e','#101D2C']];
+const ADD=[['Catering',95000,1],['Dekorasi & Styling',45000000,0],['Hiburan / Band',12000000,0],['Dokumentasi',9000000,0],['MC & Rundown',4500000,0]];
+const BASE={wedding:180000,corporate:140000,social:110000};
+const TN=['Standard','Premium','Bespoke VIP'];
+let rev=JSON.parse(localStorage.getItem('mt_rev')||'null')||[
+{n:'Rina & Dimas',e:'Wedding',r:5,m:'Semua detail terkelola. Kami tinggal menikmati hari bahagia.',ok:1},
+{n:'PT Sinar Nusantara',e:'Corporate',r:5,m:'Annual gathering 300 peserta berjalan mulus dan tepat waktu.',ok:1},
+{n:'Bu Wulan',e:'Social',r:4,m:'Tim ramah dan responsif, budget transparan.',ok:1}];
+try{rev=rev.slice(0,50)}catch(e){}
+
+/* ROUTER */
+const V=['home','services','simulator','portfolio','about','contact','b2b','reviews'];
+function route(){let h=location.hash.slice(1);if(!V.includes(h))h='home';
+document.querySelectorAll('section.v').forEach(s=>s.classList.toggle('on',s.id===h));
+document.querySelectorAll('nav a').forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+h));
+$('#nav').classList.remove('open');window.scrollTo(0,0);track('page_view',{page:h})}
+addEventListener('hashchange',route);
+$('#burger').onclick=()=>$('#nav').classList.toggle('open');
+
+/* RENDER */
+const pcard=p=>`<div class="card"><div class="ph" style="--c1:${p[2]};--c2:${p[3]}"><span class="tag">${p[1]}</span></div><b>${p[0]}</b></div>`;
+$('#homePort').innerHTML=PF.slice(0,3).map(pcard).join('');
+$('#svc').innerHTML=SV.map(s=>`<div class="card"><i data-lucide="${s[1]}" class="gold"></i><h3>${s[0]}</h3><p class="mut">${s[2]}</p><div class="tier">${TN.map(t=>`<a class="btn o" href="${wa(`Halo momenTA, saya tertarik paket ${t} untuk ${s[0]}.`)}" target="_blank" rel="noopener" data-track="svc_${t}">${t}</a>`).join('')}</div></div>`).join('');
+let cat='Semua';
+function port(){const c=['Semua',...new Set(PF.map(p=>p[1]))];
+$('#chips').innerHTML=c.map(x=>`<button class="chip ${x===cat?'on':''}" data-c="${x}">${x}</button>`).join('');
+$('#port').innerHTML=PF.filter(p=>cat==='Semua'||p[1]===cat).map(pcard).join('')}
+$('#chips').onclick=e=>{if(e.target.dataset.c){cat=e.target.dataset.c;port()}};port();
+
+/* CAROUSEL + REVIEWS */
+let ci=0;function car(){const a=rev.filter(r=>r.ok);if(!a.length)return;const r=a[ci%a.length];
+$('#carousel').innerHTML=`<div class="st" style="font-size:1.4rem">${starsH(r.r)}</div><p style="font-size:1.1rem">“${esc(r.m)}”</p><b>${esc(r.n)}</b> <span class="mut">· ${esc(r.e)}</span>`}
+setInterval(()=>{ci++;car()},5000);
+function rlist(){$('#rlist').innerHTML=rev.map(r=>`<div class="card" style="margin-bottom:14px"><span class="st">${starsH(r.r)}</span> ${r.ok?'':'<span class="tag mut">menunggu moderasi</span>'}<p>${esc(r.m)}</p><b>${esc(r.n)}</b> <span class="mut">· ${esc(r.e)}</span></div>`).join('')}
+let rating=5;
+function stars(){$('#stars').innerHTML=[1,2,3,4,5].map(i=>`<button type="button" class="${i<=rating?'on':''}" data-s="${i}" aria-label="${i} bintang"><i data-lucide="star" style="${i<=rating?'fill:currentColor':''}"></i></button>`).join('');icons()}
+$('#stars').onclick=e=>{const b=e.target.closest('button');if(b){rating=+b.dataset.s;stars()}};
+$('#rv').onsubmit=e=>{e.preventDefault();const f=new FormData(e.target),r={n:f.get('n'),e:f.get('e'),r:rating,m:f.get('m'),ok:0};
+rev.unshift(r);try{localStorage.setItem('mt_rev',JSON.stringify(rev))}catch(x){}
+rlist();track('review_submit',{rating});e.target.reset();
+if(confirm('Terima kasih! Konfirmasi ulasan via WhatsApp agar dapat ditampilkan publik?'))window.open(wa(`Konfirmasi ulasan momenTA\nNama: ${r.n}\nAcara: ${r.e}\nRating: ${r.r}/5\n"${r.m}"`),'_blank')};
+
+/* CALCULATOR */
+$('#addons').innerHTML=ADD.map((a,i)=>`<label class="chk"><input type="checkbox" data-i="${i}" ${i<2?'checked':''}> ${a[0]}</label>`).join('');
+function calc(){const g=+$('#cGuest').value,t=$('#cType').value,m=+$('#cTier').value;$('#gv').textContent=g;
+let rows=[['Paket dasar ('+g+' tamu)',BASE[t]*g*m*0.6]];
+document.querySelectorAll('#addons input:checked').forEach(c=>{const a=ADD[c.dataset.i];rows.push([a[0],(a[2]?a[1]*g:a[1]*(g/200+.4))*m])});
+const sum=rows.reduce((s,r)=>s+r[1],0),lo=sum*.9,hi=sum*1.15;
+$('#tot').textContent=idr(lo)+' – '+idr(hi);
+$('#brk').innerHTML=rows.map(r=>`${r[0]}: ${idr(r[1])}`).join('<br>');
+return{rows,lo,hi,g,t,tier:TN[[1,1.5,2.4].indexOf(m)]}}
+['#cType','#cTier','#cGuest','#addons'].forEach(s=>$(s).addEventListener('input',calc));calc();
+const sumTxt=c=>`Halo momenTA, berikut simulasi budget saya:\nAcara: ${c.t}\nPaket: ${c.tier}\nTamu: ${c.g}\n${c.rows.map(r=>'- '+r[0]).join('\n')}\nEstimasi: ${idr(c.lo)} – ${idr(c.hi)}\nMohon info lanjutan.`;
+$('#waBtn').onclick=()=>window.open(wa(sumTxt(calc())),'_blank');
+function pdf(title,lines,name){if(!window.jspdf){alert('PDF library belum termuat. Periksa koneksi.');return}
+const d=new jspdf.jsPDF();d.setFillColor(16,29,44);d.rect(0,0,210,32,'F');d.setTextColor(199,165,106);d.setFontSize(22);d.text('momenTA',14,20);
+d.setTextColor(30,41,59);d.setFontSize(15);d.text(title,14,46);d.setFontSize(11);let y=58;
+lines.forEach(l=>{d.splitTextToSize(l,180).forEach(s=>{d.text(s,14,y);y+=7})});
+d.setFontSize(9);d.setTextColor(120);d.text('Yogyakarta · WA 085641156827 · Senin–Sabtu 08:00–17:00 WIB',14,285);d.save(name)}
+$('#pdfBtn').onclick=()=>{const c=calc();pdf('Quotation Estimasi Acara',[`Tanggal: ${new Date().toLocaleDateString('id-ID')}`,`Jenis: ${c.t} | Paket: ${c.tier} | Tamu: ${c.g}`,'',...c.rows.map(r=>`${r[0]}: ${idr(r[1])}`),'',`ESTIMASI TOTAL: ${idr(c.lo)} – ${idr(c.hi)}`,'','*Estimasi awal, bukan penawaran final.'],'quotation-momenta.pdf')};
+const checklist=()=>pdf('Event Planning Checklist',['[ ] Tentukan tanggal & budget','[ ] Survei & booking venue','[ ] Daftar tamu & undangan','[ ] Catering & tasting','[ ] Dekorasi & konsep','[ ] Hiburan, MC & rundown','[ ] Dokumentasi','[ ] Transportasi & akomodasi tamu','[ ] Gladi resik H-3','[ ] Konfirmasi vendor H-1'],'checklist-momenta.pdf');
+$('#profBtn').onclick=()=>pdf('Company Profile',['momenTA adalah Event Organizer berbasis Yogyakarta.','Layanan: Wedding, Corporate, Social, Private Party, Anniversary.','Area: DIY, Solo Raya, dan sekitarnya.','Kontak: 085641156827'],'profile-momenta.pdf');
+
+/* FORMS */
+$('#cf').onsubmit=e=>{e.preventDefault();const f=Object.fromEntries(new FormData(e.target));window.open(wa(`Halo momenTA, saya ${f.n}. Acara: ${f.e}, tanggal: ${f.d||'-'}.\n${f.m}`),'_blank')};
+$('#rf').onsubmit=e=>{e.preventDefault();const f=Object.fromEntries(new FormData(e.target));window.open(wa(`RFQ Corporate\nPerusahaan: ${f.c}\nPIC: ${f.p}\nKebutuhan: ${f.t}\nPeserta: ${f.g}\nTermin: ${f.i}`),'_blank')};
+$('#heroWa').href=$('#wa').href=wa('Halo momenTA, saya ingin konsultasi acara.');
+$('#heroWa').target=$('#wa').target='_blank';
+
+/* LEAD MODAL */
+let shown=false;const open=()=>{if(shown||location.hash.slice(1)&&location.hash!=='#home')return;shown=true;$('#modal').classList.add('on')};
+addEventListener('scroll',()=>{if(scrollY/(document.body.scrollHeight-innerHeight)>.5)open()});
+document.addEventListener('mouseleave',e=>{if(e.clientY<0)open()});
+$('#mx').onclick=()=>$('#modal').classList.remove('on');
+$('#mWa').onclick=()=>window.open(wa('Halo momenTA, saya ingin Free 30-Minute Consultation.'),'_blank');
+$('#mPdf').onclick=checklist;
+document.addEventListener('click',e=>{const t=e.target.closest('[data-track]');if(t)track(t.dataset.track)});
+
+stars();rlist();car();route();icons();
+setTimeout(()=>$('#wag').style.display='none',9000);
+</script>
+</body>
+</html>
